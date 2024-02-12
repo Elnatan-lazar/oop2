@@ -362,7 +362,7 @@ public class GameLogic implements PlayableLogic{
 
             if (HowsTurn) {//player 2 turn
                 if (inMap(leftP)) {
-                    if (getPieceAtPosition(leftP) != null) {
+                    if (getPieceAtPosition(leftP) != null && getPieceAtPosition(leftP) instanceof Pawn) {
                         if (Board[leftP.getX()][leftP.getY()].getOwner().isPlayerOne() && Board[leftP.getX()][leftP.getY()].getType().equals("King") == false) { // הכלי שמימינו שייך לשחקן השני
                             if (!inMap(leftP2)) {
                                 Board[leftP.getX()][leftP.getY()] = null;
@@ -384,7 +384,7 @@ public class GameLogic implements PlayableLogic{
                 }
 
                 if (inMap(rightP)) {
-                    if (getPieceAtPosition(rightP) != null) {
+                    if (getPieceAtPosition(rightP) != null && getPieceAtPosition(rightP) instanceof Pawn) {
 
                         if (Board[rightP.getX()][rightP.getY()].getOwner().isPlayerOne() && Board[rightP.getX()][rightP.getY()].getType().equals("King") == false) { // הכלי שמימינו שייך לשחקן השני
                             if (!inMap(rightP2)) {
@@ -409,7 +409,7 @@ public class GameLogic implements PlayableLogic{
 
                 if (inMap(upP)) {
 
-                    if (getPieceAtPosition(upP) != null) {
+                    if (getPieceAtPosition(upP) != null && getPieceAtPosition(upP) instanceof Pawn) {
                         if (Board[upP.getX()][upP.getY()].getOwner().isPlayerOne() && Board[upP.getX()][upP.getY()].getType().equals("King") == false) { // הכלי שמימינו שייך לשחקן השני
                             if (!inMap(upP2)) {
                                 Board[upP.getX()][upP.getY()] = null;
@@ -432,7 +432,7 @@ public class GameLogic implements PlayableLogic{
 
                 if (inMap(downP)) {
 
-                    if (getPieceAtPosition(downP) != null) {
+                    if (getPieceAtPosition(downP) != null && getPieceAtPosition(downP) instanceof Pawn) {
                         if (Board[downP.getX()][downP.getY()].getOwner().isPlayerOne() && Board[downP.getX()][downP.getY()].getType().equals("King") == false) { // הכלי שמימינו שייך לשחקן השני
                             if (!inMap(downP2)) {
                                 Board[downP.getX()][downP.getY()] = null;
